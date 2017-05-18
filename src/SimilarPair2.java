@@ -69,13 +69,13 @@ public class SimilarPair2 {
         sc.close();
 
         int bit[]  = new int[n+2];
-        int similar = dfs(tree, root, bit,n, k);
+        long similar = dfs(tree, root, bit,n, k);
 
         System.out.println(similar);
     }
 
-    private static int dfs(Map<Integer, List<Integer>> tree, int node, int bit[], int n, int k) {
-        int similar = BinaryIndexedTree.getRangeSum(bit, Math.max(node - k, 1), Math.min(node + k, n));
+    private static long dfs(Map<Integer, List<Integer>> tree, int node, int bit[], int n, int k) {
+        long similar = BinaryIndexedTree.getRangeSum(bit, Math.max(node - k, 1), Math.min(node + k, n));
         BinaryIndexedTree.update(bit, 1, node);
         List<Integer> children = tree.get(node);
         if (children != null) {
