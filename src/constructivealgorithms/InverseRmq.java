@@ -50,7 +50,7 @@ public class InverseRmq {
         }
 
         // indexed by element frequency.
-        TreeSet<Integer>[] elementsInFrequency = new TreeSet[highestFrequency - 1];
+        @SuppressWarnings("unchecked") TreeSet<Integer>[] elementsInFrequency = new TreeSet[highestFrequency - 1];
 
         int root = Integer.MIN_VALUE;
         for (Integer key : frequencies.keySet()) {
@@ -101,9 +101,7 @@ public class InverseRmq {
             }
         }
 
-        if (index != 2 * n)
-            return false;
+        return index == 2 * n;
 
-        return true;
     }
 }

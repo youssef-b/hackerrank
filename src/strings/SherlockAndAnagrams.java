@@ -47,6 +47,6 @@ public class SherlockAndAnagrams {
             numberNeeded += Math.abs(alphabetFrequency[i]);
         }
 
-        return (numberNeeded>0)?false:true;
+        return (numberNeeded <= 0);
     }
 }

@@ -30,7 +30,7 @@ public class Pairs {
     }
 
     private static int getOccurrence(Map<Integer, Integer> map, int number) {
-        return map.get(number) == null ? 0 : map.get(number).intValue();
+        return map.get(number) == null ? 0 : map.get(number);
     }
 
 }

@@ -9,9 +9,7 @@ public class SegmentTree {
         n = arr.length;
         segmentTree = new int[2 * n];
 
-        for (int i = 0; i < n; i++) {
-            segmentTree[n + i] = arr[i];
-        }
+        System.arraycopy(arr, 0, segmentTree, n, n);
         for (int i = n - 1; i > 0; i--) {
             segmentTree[i] = Math.min(segmentTree[2 * i], segmentTree[2 * i + 1]);
         }

@@ -39,13 +39,12 @@ public class FenwickTree {
 
     public static void main(String args[]){
         int input[] = {5,2,-6,4,15,-1};
-        FenwickTree ft = new FenwickTree();
-        int fenwickTree[] = ft.createFenwickTree(input);
-        assert 5 == ft.getSum(fenwickTree, 0);
-        assert 7 == ft.getSum(fenwickTree, 1);
-        assert 1 == ft.getSum(fenwickTree, 2);
-        assert 5 == ft.getSum(fenwickTree, 3);
-        assert 20 == ft.getSum(fenwickTree, 4);
-        assert 19 == ft.getSum(fenwickTree, 5);
+        int fenwickTree[] = createFenwickTree(input);
+        assert 5 == getSum(fenwickTree, 0);
+        assert 7 == getSum(fenwickTree, 1);
+        assert 1 == getSum(fenwickTree, 2);
+        assert 5 == getSum(fenwickTree, 3);
+        assert 20 == getSum(fenwickTree, 4);
+        assert 19 == getSum(fenwickTree, 5);
     }
 }

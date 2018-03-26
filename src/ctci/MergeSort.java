@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.hackerrank.com/challenges/ctci-merge-sort
  */
+@SuppressWarnings("ALL")
 public class MergeSort {
 
     public static void main(String[] args) {
@@ -41,9 +42,7 @@ public class MergeSort {
     private static long merge(int arr[], int newArr[], int low, int middle, int high) {
 
         long inversions = 0;
-        for (int i = low; i <= high; i++) {
-            newArr[i] = arr[i];
-        }
+        System.arraycopy(arr, low, newArr, low, high + 1 - low);
 
         int i = low;
         int j = middle + 1;

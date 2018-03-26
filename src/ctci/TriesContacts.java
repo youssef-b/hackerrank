@@ -54,7 +54,7 @@ public class TriesContacts {
                     return 0;
                 children = t.children;
             }
-            return t.numberOfLeafChildren;
+            return t != null ? t.numberOfLeafChildren : 0;
         }
     }
 
